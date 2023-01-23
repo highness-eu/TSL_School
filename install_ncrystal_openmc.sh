@@ -20,6 +20,7 @@ make -j 4
 sudo make install
 source /usr/local/setup.sh
 nctool --test
+echo "source /usr/local/setup.sh" >> ~/.bashrc
 cd ../
 
 # Install OpenMC
