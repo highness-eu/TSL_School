@@ -12,6 +12,10 @@ mkdir openmc_ncrystal
 cd openmc_ncrystal
 
 # Install NCrystal
+#
+# More instructions here:
+# https://github.com/mctools/ncrystal/blob/master/INSTALL
+#
 git clone https://github.com/mctools/ncrystal.git
 mkdir build_ncrystal
 cd build_ncrystal
@@ -24,6 +28,10 @@ echo "source /usr/local/setup.sh" >> ~/.bashrc
 cd ../
 
 # Install OpenMC
+#
+# More instructions here:
+# https://docs.openmc.org/en/latest/usersguide/install.html#installing-from-source
+#
 git clone --recurse-submodules https://github.com/openmc-dev/openmc.git
 cd openmc
 git checkout develop
