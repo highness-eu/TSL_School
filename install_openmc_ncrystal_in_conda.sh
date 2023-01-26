@@ -22,7 +22,7 @@ cd build_ncrystal
 cmake ../ncrystal -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX
 make -j 8
 make install
-source /usr/local/setup.sh
+source $CONDA_PREFIX/setup.sh
 nctool --test
 cd ../
 
