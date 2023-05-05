@@ -5,28 +5,28 @@
 #
 
 # Install prerequisites
-# sudo apt install -y git g++ cmake libhdf5-dev libpng-dev curl xcrysden
+# sudo apt install -y git g++ cmake libhdf5-dev libpng-dev curl xcrysden 
+# sudo apt install -y --no-install-recommends libfftw3-dev quantum-espresso
 # 
 # curl --output anaconda.sh https://repo.anaconda.com/archive/Anaconda3-2023.03-Linux-x86_64.sh
 # chmod +x anaconda.sh
 # ./anaconda.sh
-
-conda update -y -n base conda
-conda install -y -n base conda-libmamba-solver
-conda config --set solver libmamba
 
 # Create installation directory
 mkdir openmc_ncrystal_vm
 cd openmc_ncrystal_vm
 
 conda create -y --name openmc_ncrystal_vm python=3.9
+source ~/anaconda3/etc/profile.d/conda.sh
+
 conda activate openmc_ncrystal_vm
-conda install -y pip
-conda install -y -c conda-forge pyside2 jupyterlab qe
+conda install -y pip  jupyterlab
+conda install -y -c conda-forge pyside2
 
 # Install NCrystal
 git clone https://github.com/mctools/ncrystal.git
-mkdir build_ncrystal && cd build_ncrystal
+mkdir build_ncrystal 
+cd build_ncrystal
 cmake ../ncrystal -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX  -DNCRYSTAL_BUILTIN_PLUGINS="XuShuqi7:MagScat::main;highness-eu:SANSND::main"
 make -j 2
 make install
@@ -37,7 +37,8 @@ cd ../
 
 # Install MCPL
 git clone https://github.com/mctools/mcpl.git 
-mkdir build_mcpl && cd build_mcpl
+mkdir build_mcpl 
+cd build_mcpl
 cmake ../mcpl  -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX
 make -j 2
 make install
@@ -49,9 +50,11 @@ git clone --recurse-submodules https://github.com/openmc-dev/openmc.git
 cd openmc
 git checkout develop
 cd ../
-mkdir build_openmc && cd build_openmc
+mkdir build_openmc 
+cd build_openmc
 cmake ../openmc -DOPENMC_USE_NCRYSTAL=on -DOPENMC_USE_MCPL=on -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX
-make -j 2 && make install
+make -j 2 
+make install
 cd ../openmc
 pip install .
 python -c "import openmc; print(openmc.Material.from_ncrystal('Al_sg225.ncmat'))"
