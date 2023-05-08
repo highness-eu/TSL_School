@@ -7,6 +7,7 @@
 # Install prerequisites
 # sudo apt install -y git g++ cmake libhdf5-dev libpng-dev curl xcrysden 
 # sudo apt install -y --no-install-recommends libfftw3-dev quantum-espresso
+# sudo apt install -y gfortran
 # 
 # curl --output anaconda.sh https://repo.anaconda.com/archive/Anaconda3-2023.03-Linux-x86_64.sh
 # chmod +x anaconda.sh
@@ -63,6 +64,17 @@ cd ../
 pip install openmc-plotter
 
 pip install ipympl matplotlib spglib gemmi ase pymatgen cif2cell
+
+conda install -y -c conda-forge pyne
+
+# Install NJOY
+git clone https://github.com/njoy/NJOY2016.git
+mkdir build_njoy
+cd build_njoy
+cmake ../NJOY2016/ -Dstatic_libraries=ON   -Dstatic_njoy=ON -DCMAKE_EXE_LINKER_FLAGS=-static -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX  
+make -j 2
+make install
+cd ..
 
 # Install OpenMC data (ENDF/B-VIII.0 library)
 wget -O endf8.xz https://anl.box.com/shared/static/uhbxlrx7hvxqw27psymfbhi7bx7s6u6a.xz && tar -xJf endf8.xz
