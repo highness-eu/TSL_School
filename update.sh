@@ -14,6 +14,7 @@ make install
 cd ..
 
 cd ncrystal
+git checkout develop
 git pull
 cd ../build_ncrystal
 make -j 2 
