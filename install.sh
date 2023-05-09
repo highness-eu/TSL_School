@@ -26,6 +26,9 @@ conda install -y -c conda-forge pyside2
 
 # Install NCrystal
 git clone https://github.com/mctools/ncrystal.git
+cd ncrystal
+git checkout develop
+cd ..
 mkdir build_ncrystal 
 cd build_ncrystal
 cmake ../ncrystal -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX  -DNCRYSTAL_BUILTIN_PLUGINS="XuShuqi7:MagScat::main;highness-eu:SANSND::main"
