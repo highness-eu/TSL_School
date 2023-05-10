@@ -15,6 +15,7 @@
 # ./anaconda.sh
 
 # Create installation directory
+cd ~/
 mkdir openmc_ncrystal_vm
 cd openmc_ncrystal_vm
 
