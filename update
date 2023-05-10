@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 source ~/anaconda3/etc/profile.d/conda.sh
-conda activate openmc_ncrystal_vm
+conda activate tsl_env
 source $CONDA_PREFIX/setup.sh
 export LD_LIBRARY_PATH=
 
-cd ~/openmc_ncrystal_vm
+cd ~/tsl_software
 cd mcpl
 git pull
 cd ../build_mcpl
-make -j 2 
+make -j 2
 make install
 cd ..
 

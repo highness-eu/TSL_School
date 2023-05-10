@@ -16,13 +16,13 @@
 
 # Create installation directory
 cd ~/
-mkdir openmc_ncrystal_vm
-cd openmc_ncrystal_vm
+mkdir tsl_software
+cd tsl_software
 
-conda create -y --name openmc_ncrystal_vm python=3.9
+conda create -y --name tsl_env python=3.9
 source ~/anaconda3/etc/profile.d/conda.sh
 
-conda activate openmc_ncrystal_vm
+conda activate tsl_env
 conda install -y pip  jupyterlab
 conda install -y -c conda-forge pyside2
 
