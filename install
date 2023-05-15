@@ -8,7 +8,7 @@
 # sudo apt install -y git g++ cmake libhdf5-dev libpng-dev curl xcrysden 
 # sudo apt install -y --no-install-recommends libfftw3-dev quantum-espresso
 # sudo apt install -y gfortran
-# sudo apt install -y emacs-gtk mc nedit vim mousepad
+# sudo apt install -y emacs-gtk mc nedit vim mousepad evince gnumeric
 # 
 # curl --output anaconda.sh https://repo.anaconda.com/archive/Anaconda3-2023.03-Linux-x86_64.sh
 # chmod +x anaconda.sh
