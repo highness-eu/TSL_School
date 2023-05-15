@@ -22,7 +22,8 @@ make install
 cd ..
 
 cd openmc
-git pull
+git pull # In case we need to update an older VM
+git checkout 6561838 # Do not update after May 15th.
 cd ../build_openmc
 make -j 2
 make install
