@@ -54,7 +54,8 @@ cd ../
 # Install OpenMC
 git clone --recurse-submodules https://github.com/openmc-dev/openmc.git
 cd openmc
-git checkout develop
+# git checkout develop
+git checkout 6561838 # Do not update after May 15th.
 cd ../
 mkdir build_openmc 
 cd build_openmc
