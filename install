@@ -14,8 +14,12 @@
 # chmod +x anaconda.sh
 # ./anaconda.sh
 
-# Create installation directory
 cd ~/
+# Clone and write protect NCrystal notebooks repo
+git clone https://github.com/mctools/ncrystal-notebooks.git
+find ~/ncrystal-notebooks/ -type d -execdir chmod ugo-w {} \;
+
+# Create installation directory
 mkdir tsl_software
 cd tsl_software
 
