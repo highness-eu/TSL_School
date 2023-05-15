@@ -78,10 +78,13 @@ pip install ipympl matplotlib spglib gemmi ase pymatgen cif2cell
 conda install -y -c conda-forge pyne
 
 # Install NJOY
-git clone https://github.com/njoy/NJOY2016.git
+git clone https://github.com/highness-eu/NJOY2016.git
+cd NJOY2016
+git checkout 2016.61_njoyncrystal
+cd ../
 mkdir build_njoy
 cd build_njoy
-cmake ../NJOY2016/ -Dstatic_libraries=ON   -Dstatic_njoy=ON -DCMAKE_EXE_LINKER_FLAGS=-static -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX  
+cmake ../NJOY2016/  -DNJOY_NCRYSTAL=True -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX  
 make -j 2
 make install
 cd ..
