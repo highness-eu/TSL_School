@@ -9,6 +9,7 @@ cd ~/tsl_software
 cd mcpl
 git pull
 cd ../build_mcpl
+cmake ../mcpl  -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX
 make -j 2
 make install
 cd ..
@@ -17,7 +18,8 @@ cd ncrystal
 git checkout develop
 git pull
 cd ../build_ncrystal
-make -j 2 
+cmake ../ncrystal -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX  -DNCRYSTAL_BUILTIN_PLUGINS="XuShuqi7:MagScat::main;highness-eu:SANSND::main"
+make -j 2
 make install
 cd ..
 
@@ -25,7 +27,8 @@ cd openmc
 git pull # In case we need to update an older VM
 git checkout 6561838 # Do not update after May 15th.
 cd ../build_openmc
-make -j 2
+cmake ../openmc -DOPENMC_USE_NCRYSTAL=on -DOPENMC_USE_MCPL=on -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX
+make -j 2 
 make install
 cd ../openmc
 pip install .
