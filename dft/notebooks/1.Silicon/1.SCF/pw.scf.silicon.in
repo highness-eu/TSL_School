@@ -1,0 +1,56 @@
+&CONTROL
+  ! the type of calculation we want to perform, scf stands for Self Consistent Field
+  calculation = 'scf'
+
+  ! the name that you choose for your simulation, it will be the prefix for all the files written to disk 
+  prefix = 'si'
+
+  ! the location of your output files
+  outdir = './'
+
+  ! the location of your pseudopotential files
+  pseudo_dir = './pseudo/'
+
+  ! verbosity high will give more details on the output file
+  verbosity = 'high'  
+/
+&SYSTEM
+  
+  ! cutoff on the plane waves (in Ry)
+  ecutwfc =   30
+
+  ! cutoff for the charge density (in Ry) apprx 4*ecutwfc for norm-conserving pseuods from 8-12*ecutwfc for ultrasoft
+  ecutrho =   240
+
+  ! ibrav is the way in which you can specify the cell with the shortcuts offered by QE, =0 means we will specify it manually with the CELL card
+  ibrav = 0
+  
+  ! number of atoms in the system
+  nat = 2
+  
+  ! type of atoms in the system
+  ntyp = 1
+/
+&ELECTRONS
+  ! convergence threshold on the self consistent cycle
+  conv_thr =   4.0000000000d-10
+  
+  ! maximum number of steps before exiting the cycle
+  electron_maxstep = 100
+  
+  ! Mixing factor used in the self-consistent method
+  mixing_beta =   0.4
+/
+ATOMIC_SPECIES
+! name of the atom, mass and name of the pseudopotential
+Si     28.0855 Si.pbe-n-rrkjus_psl.1.0.0.UPF
+K_POINTS automatic
+! k-point grid in reciprocal space
+8 8 8 0 0 0
+ATOMIC_POSITIONS angstrom
+....
+....
+CELL_PARAMETERS angstrom
+....
+....
+....

@@ -1,0 +1,41 @@
+&CONTROL
+  ! vc-relax stands for variable-cell relaxation, it will change the lattice parameters and internal position to find the minimum
+  calculation = 'vc-relax'
+  prefix = 'si'
+  outdir = './'
+  pseudo_dir = './pseudo/'
+  verbosity = 'high'  
+  ! you may want to specify the convergence threshold on the forces 
+  forc_conv_thr=1.0d-4
+  ! and you may want to specify the convergence threshold on the total energy
+  etot_conv_thr=1.0d-6
+/
+&SYSTEM
+  ecutwfc =   30
+  ecutrho =   240
+  ibrav = 0
+  nat = 2
+  ntyp = 1
+/
+&ELECTRONS
+  conv_thr =   4.0000000000d-10
+  electron_maxstep = 100
+  mixing_beta =   0.4
+/
+&IONS
+! here you can specify details on the minimization algorithm for the internal positions
+/
+&CELL
+! here you can specify details on the minimization algorithm for the lattice parameters
+/
+ATOMIC_SPECIES
+Si     28.0855 Si.pbe-n-rrkjus_psl.1.0.0.UPF
+K_POINTS automatic
+8 8 8 0 0 0
+ATOMIC_POSITIONS angstrom
+Si      0.0000000   0.0000000   0.0000000
+Si      1.3452500   1.3452500   1.3452500
+CELL_PARAMETERS angstrom
+  2.6905000   2.6905000   0.0000000 
+  2.6905000   0.0000000   2.6905000 
+  0.0000000   2.6905000   2.6905000 

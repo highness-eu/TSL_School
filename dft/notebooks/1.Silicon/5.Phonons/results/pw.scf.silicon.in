@@ -1,0 +1,30 @@
+&CONTROL
+  calculation = 'scf'
+  prefix = 'si'
+  outdir = './'
+  pseudo_dir = './pseudo/'
+  verbosity = 'high'  
+/
+&SYSTEM
+  ecutwfc =   30
+  ecutrho =   240
+  ibrav = 0
+  nat = 2
+  ntyp = 1
+/
+&ELECTRONS
+  conv_thr =   4.0000000000d-10
+  electron_maxstep = 100
+  mixing_beta =   0.4
+/
+ATOMIC_SPECIES
+Si     28.0855 Si.pbe-n-rrkjus_psl.1.0.0.UPF
+K_POINTS automatic
+8 8 8 0 0 0
+ATOMIC_POSITIONS angstrom
+Si            0.0000000000       -0.0000000000        0.0000000000
+Si            1.3672162898        1.3672162898        1.3672162898
+CELL_PARAMETERS angstrom
+   2.734432580   2.734432580   0.000000000
+   2.734432580   0.000000000   2.734432580
+   0.000000000   2.734432580   2.734432580

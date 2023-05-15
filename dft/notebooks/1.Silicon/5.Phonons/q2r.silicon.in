@@ -1,0 +1,10 @@
+&input
+! the type of sum rule to impose
+zasr='simple'
+
+!the name of the dynamical matricies computed by ph.x
+fildyn='si.dyn'
+
+!the name of the file where the real space force constants will be written
+flfrc='si.fc'
+/

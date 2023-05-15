@@ -1,0 +1,39 @@
+CIF2CELL 2.0.0
+2023-05-12 18:13
+Output for None (?)
+
+ BIBLIOGRAPHIC INFORMATION
+Mulder, Fokko M. et al., The Journal of Physical Chemistry C 114, 10648- (2010) 
+ INPUT CELL INFORMATION
+Symmetry information:
+Cubic crystal system.
+Space group number     : 225
+Hall symbol            : -F 4 2 3
+Hermann-Mauguin symbol : Fm-3m
+
+Lattice parameters:
+          a           b           c 
+  4.0339000   4.0339000   4.0339000 
+      alpha        beta       gamma 
+ 90.0000000  90.0000000  90.0000000 
+Representative sites :
+Atom            x           y           z 
+Al      0.0000000   0.0000000   0.0000000
+
+ OUTPUT CELL INFORMATION
+Symmetry information:
+Cubic crystal system.
+Space group number     : 225
+Hall symbol            : -F 4 2 3
+Hermann-Mauguin symbol : Fm-3m
+
+Bravais lattice vectors :
+  2.0169500   2.0169500   0.0000000 
+  2.0169500   0.0000000   2.0169500 
+  0.0000000   2.0169500   2.0169500 
+All sites, (cartesian coordinates):
+Atom            x           y           z 
+Al      0.0000000   0.0000000   0.0000000
+
+Unit cell volume  :  16.4102574 A^3
+Unit cell density :   1.6441546 u/A^3 =  18.4241843 g/cm^3

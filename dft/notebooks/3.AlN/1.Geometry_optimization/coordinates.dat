@@ -1,0 +1,43 @@
+CIF2CELL 2.0.0
+2023-05-12 23:00
+Output for Al N (Aluminium nitride)
+
+ BIBLIOGRAPHIC INFORMATION
+Ott, H, Zeitschrift fuer Physik 22, 201-214 (1924) 
+ INPUT CELL INFORMATION
+Symmetry information:
+Hexagonal crystal system.
+Space group number     : 186
+Hall symbol            : P 6c -2c
+Hermann-Mauguin symbol : P63mc
+
+Lattice parameters:
+          a           b           c 
+  3.1130000   3.1130000   4.9810000 
+      alpha        beta       gamma 
+ 90.0000000  90.0000000 120.0000000 
+Representative sites :
+Atom            x           y           z 
+Al      0.3333000   0.6667000   0.0000000
+N       0.3333000   0.6667000   0.3800000
+
+ OUTPUT CELL INFORMATION
+Symmetry information:
+Hexagonal crystal system.
+Space group number     : 186
+Hall symbol            : P 6c -2c
+Hermann-Mauguin symbol : P63mc
+
+Bravais lattice vectors :
+  2.6959371  -1.5565000   0.0000000 
+  0.0000000   3.1130000   0.0000000 
+  0.0000000   0.0000000   4.9810000 
+All sites, (cartesian coordinates):
+Atom            x           y           z 
+Al      0.8986457   1.5565000   0.0000000
+Al      1.7972914   0.0000000   2.4905000
+N       0.8986457   1.5565000   1.8927800
+N       1.7972914   0.0000000   4.3832800
+
+Unit cell volume  :  41.8028041 A^3
+Unit cell density :   1.9609929 u/A^3 =  21.9746329 g/cm^3

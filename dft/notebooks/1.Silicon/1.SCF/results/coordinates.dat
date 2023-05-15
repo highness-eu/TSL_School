@@ -1,0 +1,40 @@
+CIF2CELL 2.0.0
+2023-05-06 14:35
+Output for None
+
+ BIBLIOGRAPHIC INFORMATION
+Kitano, A. et al., Physical Review, Serie 3. B - Condensed Matter (18,1978-) 64, 0452061-0452069 (2001) 
+ INPUT CELL INFORMATION
+Symmetry information:
+Cubic crystal system.
+Space group number     : 227
+Hall symbol            : F 4d 2 3 -1d
+Hermann-Mauguin symbol : Fd-3m:1
+
+Lattice parameters:
+          a           b           c 
+  5.3810000   5.3810000   5.3810000 
+      alpha        beta       gamma 
+ 90.0000000  90.0000000  90.0000000 
+Representative sites :
+Atom            x           y           z 
+Si      0.0000000   0.0000000   0.0000000
+
+ OUTPUT CELL INFORMATION
+Symmetry information:
+Cubic crystal system.
+Space group number     : 227
+Hall symbol            : F 4d 2 3 -1d
+Hermann-Mauguin symbol : Fd-3m:1
+
+Bravais lattice vectors :
+  2.6905000   2.6905000   0.0000000 
+  2.6905000   0.0000000   2.6905000 
+  0.0000000   2.6905000   2.6905000 
+All sites, (cartesian coordinates):
+Atom            x           y           z 
+Si      0.0000000   0.0000000   0.0000000
+Si      1.3452500   1.3452500   1.3452500
+
+Unit cell volume  :  38.9519303 A^3
+Unit cell density :   1.4420338 u/A^3 =  16.1592447 g/cm^3

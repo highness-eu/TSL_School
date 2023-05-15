@@ -1,0 +1,24 @@
+phonons of Si mesh
+ &inputph
+  ! the threshold on the self consistent cycle for each perturbation
+  tr2_ph=1.0d-16,
+
+  ! the name needs to be same of the scf calculation
+  prefix='si',
+
+  ! the mixing parameter for the scf cycle, smaller it is the higher the chance to converge but the slower the calculation
+  alpha_mix(1)=0.5
+
+  !the name of the dynamical matrices
+  fildyn='si.dyn',
+
+  ! instruct the code to compute the dielectric constant and the born effective charges (not important here but in polar semiconductors
+  epsil=.true.
+
+  ! instruct the code to perform a calculation on an automatic grid and the dimensions of the mesh
+  ldisp=.true.
+  nq1=2,nq2=2,nq3=2,
+
+  !the output directory
+  outdir='./'
+ /

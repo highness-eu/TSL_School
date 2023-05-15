@@ -1,0 +1,15 @@
+ &input
+    ! sum rule, same as q2r.x
+    asr='simple',
+
+    ! the file with the real space force constants produced by q2r
+    flfrc='si.fc',
+
+    ! the name of the file where the interpolated frequencies are written
+    flfrq='si.freq',
+
+    ! inform the code that you want to do a DOS calculation and on which grid
+    dos=.true.,
+    nk1=32, nk2=32, nk3=32,
+ /
+ 

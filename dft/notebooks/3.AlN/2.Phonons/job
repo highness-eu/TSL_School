@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH --time=10:00:00        # Walltime in hh:mm:ss 
+#SBATCH --nodes=1              # Number of nodes 
+#SBATCH --ntasks-per-node=48   # Number of MPI ranks per node,  max 48  
+#SBATCH --cpus-per-task=1      # Number of OpenMP threads for each MPI process/rank
+#SBATCH --mem=300000           # Per nodes memory request (MB),  max mem is 375GB
+#SBATCH --account=mBI23_MatBe_0
+#SBATCH --job-name=testdos
+#SBATCH --partition=g100_usr_prod
+
+
+module purge
+module load profile/chem-phys
+module load autoload qe/6.8
+
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export KMP_AFFINITY=compact
+
+srun  pw.x -npool 4 -input pw.scf.aln.in > pw.scf.aln.out
+srun ph.x -npool 4 -input ph.aln.in > ph.aln.out
+

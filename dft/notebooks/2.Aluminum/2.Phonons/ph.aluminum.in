@@ -1,0 +1,16 @@
+phonons of Al mesh
+ &inputph
+  tr2_ph=1.0d-16,
+  prefix='al',
+  
+  ! usually the convergence of metallic systems is more problematic and the mixing parameter needs to be lower
+  alpha_mix(1)=0.07
+  
+  fildyn='al.dyn',
+  
+  ! note that here we don't have epsil=.true., the static dielectric constant and born effective charges cannot be computed in metals
+  
+  ldisp=.true.
+  nq1=4,nq2=4,nq3=4,
+  outdir='./'
+ /
