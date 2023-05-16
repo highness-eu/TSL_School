@@ -1,0 +1,11 @@
+phonons of Si mesh
+ &inputph
+  tr2_ph=1.0d-16,
+  prefix='aln',
+  alpha_mix(1)=0.5
+  fildyn='aln.dyn',
+  ldisp=.true.
+  epsil=.true.
+  nq1=2,nq2=2,nq3=1,
+  outdir='./'
+ /

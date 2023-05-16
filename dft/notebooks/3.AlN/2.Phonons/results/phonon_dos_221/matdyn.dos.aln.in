@@ -1,0 +1,8 @@
+ &input
+    asr='simple',
+    flfrc='aln.fc',
+    flfrq='aln.freq',
+    dos=.true.,
+    nk1=32, nk2=32, nk3=16,
+ /
+ 

@@ -1,5 +1,5 @@
 &CONTROL
-  calculation = 'relax'
+  calculation = 'scf'
   outdir = './'
   prefix = 'aln'
   pseudo_dir = './pseudo/'
@@ -11,8 +11,8 @@
   wf_collect=.true.
 /
 &SYSTEM
-  ecutrho =   6.0000000000d+02
-  ecutwfc =   6.0000000000d+01
+  ecutrho =   4.8000000000d+02
+  ecutwfc =   5.0000000000d+01
   ibrav = 0
   nat = 4
   nosym = .false.
@@ -23,13 +23,11 @@
   electron_maxstep = 80
   mixing_beta =   4.0000000000d-01
 /
-&IONS
-/
 ATOMIC_SPECIES
 Al     26.981538 Al.pbe-n-kjpaw_psl.1.0.0.UPF
 N      14.0067 N.pbe-n-radius_5.UPF
 K_POINTS automatic
-8 8 4 0 0 0
+6 6 3 0 0 0
 ATOMIC_POSITIONS angstrom
 Al            0.9037450060        1.5653322571       -0.0037653424
 Al            1.8074900119        0.0000000000        2.5058927507
